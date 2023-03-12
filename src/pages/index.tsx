@@ -1,15 +1,14 @@
 import Head from "next/head";
-import type { FC } from "react";
-import { useState, useCallback } from "react";
+import { FC, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "@/styles/Home.module.css";
-import type { SubmitHandler } from "react-hook-form";
 import { getHello } from "@/api/hello";
 
 type LoginFormType = {
   userId: string;
   password: string;
 };
+
 const Signin: FC = () => {
   const [movie, setMovie] = useState([]);
   const {
